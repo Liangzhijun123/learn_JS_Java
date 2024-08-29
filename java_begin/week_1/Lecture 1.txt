@@ -1,0 +1,83 @@
+PRIMITIVE TYPE
+Type                  Bytes (bits)
+--------------------------------------------------
+Boolean               1 (8)
+Char                  2 (16)
+Int                   4 (32)
+Float                 4 (32)
+Long                  8 (64)
+Double                8 (64)
+
+Char:
+    -You need a lot of Char because it store ASCII numbers
+
+Float:
+    -decimal numbers
+
+====================================================================================
+
+ABSTRACT DATA TYPE
+(ADT) - a set of objects with an associated set operations
+
+Examples:
+    -Array, string, stack, queue, linked list, tree
+
+Example of operations:
+    -insert (add more memory like array more bigger)
+    -delete
+    -fetch (grab the element)
+    -update (update the value effect)
+
+====================================================================================
+
+Array
+
+//bleow code print out the total size of the array
+    int[] numbers = new int[10];
+    print(numbers.length);
+
+1D array storage:
+int[] numbers = new int[10];
+numbers[0]      numbers[6]
+numbers[1]      numbers[7]
+numbers[2]      numbers[8]
+numbers[3]      numbers[9]
+numbers[4]      numbers[10]
+numbers[5]
+
+2D array storage:
+int rows = 5;
+int cols = 2;
+int[][] numbers2D = new int[rows][cols];
+
+Accesing the row and col index -> int[2][3] (this is out of bound, there only [0,1] cols)
+
+Array operations: (any time in where the element isn't changing)
+    - insert: cannot insert new element
+    - delete: cannot delete existinglement
+    - fetch: access an array element via subscript
+    - updateL modify an array element via subscript
+
+====================================================================================
+
+STRING 
+- does not store its own data. it points to a character array
+
+String str = new String ("This is a string"); //space is a character
+
+String fetch:
+reverse[i] = in.charAt(len-i-1); (indirect access)
+
+array fetch:
+reverse[i] = inCharArray[len - i -1]; (direct fetch without having to call a method)
+
+====================================================================================
+
+STRING BUILDING
+reverse += in.charAt(len - i -1);  (anytime i concatnate, you add up overtime)
+
+String operations:
+    - insert
+    - delete
+    - fetch
+    - update
