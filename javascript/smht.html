@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style></style>
+
+  <script>
+    window.document.images[0];
+
+    ("use strict");
+    delete Object.prototype;
+    console.log("yeah");
+
+    let x = 5;
+    let y = "5";
+    let i = 11;
+
+    /* 
+        '=' assignmen                !
+        '==' check content, not type !=
+        '===' check content and type !==
+    */
+
+    if ((x === y)) {
+      console.log("yup");
+    } else {
+      console.log("nope");
+    }
+
+    // bad
+    for (let i = 0; i < dcoument.getElementByTagName('img').length; i++) {
+        
+        
+    }
+
+    // good
+    for (let i = 0, len = dcoument.getElementByTagName('img').length; i<len; i++) {
+        
+        
+    }
+
+    const z = 3.14;
+
+    for (let index = 0; index < 5; index++) {
+      const element = array[index];
+    }
+
+    console.log(index);
+  </script>
+
+  <body>
+    <p>hi</p>
+    <img src="test.jpg" />
+    <img src="test1.jpg" />
+    <img src="test2.jpg" name="dan" />
+    <img src="test3.jpg" />
+  </body>
+</html>
