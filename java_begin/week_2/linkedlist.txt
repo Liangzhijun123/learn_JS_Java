@@ -1,0 +1,59 @@
+Linkedin Lists
+-Node (object) = like data that is storing
+- Link (pointers) to another linked list or previous list
+
+Single Linkedin Lists
+- can't go back to the previous list, have to go back to the beginning of the list
+- just need to know what the next element is
+- Head: first element of the list
+- tail: last element, the next element is null
+
+Double linked Lists
+- can point to next and previous linked list
+- can keep track of more stuff
+
+Linked List fetch and update
+- to fetch or update an element, we must traverse the linked list beginning with the head and continue until the element is reached
+    - return the value store in the node, if fetch
+    - modify the node value with the desired new value if update
+
+In order to use Linked List
+- need the elements that arranged in a logical order
+    - by area code
+    - by last name
+    - by year
+
+Linked List Java Methods
+- insert
+    - add (insert element after the tail)
+    - add (int index, element E)
+- delete
+    - remove(int index)
+- fetch 
+    - get(int index)
+- update   
+    - set(int index, element E)
+
+
+List Iterator operators
+// Instantiating a List Iterator
+        ListIterator list_Iter = list.listIterator();
+
+-forward
+    -next() returns the next element in the list and advances list cursor
+    -hasNext() – can we advance any further?
+-Backward movement
+    -previous() – returns the previous element in the list and moves the cursor backwards
+    -hasPrevious() – can we go backwards any further?
+
+-insert
+    - add(Element E)
+- Delete 
+    - remove() the one after the index
+- fetch 
+    -next() or previous()
+-update
+    -set(element E)
+
+Summary:
+-linked list are use when the number of element is unknown or unknownable ahead of time
