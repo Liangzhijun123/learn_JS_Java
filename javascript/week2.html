@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function dan(x, y, z) {
+        // Ensure arguments[3] exists
+        return x + y + z + (arguments[3] || "");
+      }
+
+      function sumItAll() {
+        let sum = 0;
+        for (let index = 0; index < arguments.length; index++) {
+          sum += arguments[index];
+        }
+        return sum;
+      }
+
+      // let vs const
+      let x = 0;
+      console.log("let: ", x);
+
+      function textMe() {
+        let x = 1; //for loop, outside in global object
+        const y = 9;
+        var z = 6;
+        p = 10;
+        console.log("text me 'let', 'const', 'var' function: ", x, p);
+      }
+
+      // Use sumItAll correctly
+      let theSum = sumItAll(5, 6, 7);
+      console.log("sumItAll function result: ", theSum);
+
+      // Call the function
+      let result = dan("add: ", 5, "g", "extra argument");
+      console.log("dan function result: ", result);
+
+      console.log("before function (outside of method): ", x);
+      textMe();
+      console.log("after function: ", x, p);
+      console.log("no variable p: ", window.p); //access a var via the window
+      console.log("let: ", window.x); //cant be access with let or const
+      console.log("const: ", window.y);
+      console.log("var: ", window.z);
+
+      //object - contain arrays
+      let myArr = [4, {}, "string"];
+      // good
+
+      // cant do - dont use name/value pairs with arrays in JS
+      //myArr['name'] = "fred";
+
+      var obj = new Object(); //instiantiated
+      obj["name"] = ["dan", "scoot", "bogaard"];
+      obj["job"] = ["profess", "rit"];
+
+      let obj2 = {
+        name: ["dan", "scoot", "bogaard"],
+        job: ["profess", "rit"],
+        funct:function(x){console.log(x)}
+      };
+
+      // Print the entire arrays
+      console.log("Names:", obj["name"]);
+      console.log("Jobs:", obj["job"]);
+      console.log("accessing the index: ", obj["name"][0], obj["job"][1]);
+
+      // for loop of object
+      for (let i in obj) {
+       for (let j = 0, len = obj[i].length; j<len; j++){
+        console.log(obj[i][j]);
+        obj.funct(obj[i][j]);
+       }
+      }
+    </script>
+  </body>
+</html>
