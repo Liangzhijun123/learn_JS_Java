@@ -27,9 +27,9 @@ public class queue {
         queue.offer("teaky");
 
         System.out.println("peeking: "+queue.peek());
-        System.out.println("removing: " + queue.poll());
-        System.out.println("removing: " + queue.poll());
-        System.out.println("removing: " + queue.poll());
+        // System.out.println("removing: " + queue.poll());
+        // System.out.println("removing: " + queue.poll());
+        // System.out.println("removing: " + queue.poll());
         System.out.println("the people in the line right now: "+queue);
         System.out.println("length of the queue: "+queue.size());
         System.out.println("is this person in the line? "+ queue.contains("teaky"));

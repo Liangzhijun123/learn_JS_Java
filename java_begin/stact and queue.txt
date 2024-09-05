@@ -1,0 +1,30 @@
+Stack
+Elements are arranged on top of another. LIFO. (if want access, you need to remove one by one in order to find one that you want)
+
+stack operation:
+    - Insert new element on top of the stack
+        -push (Element E);
+    - fetch and delete, removing/returning the top element of the stack
+        - pop()
+    -fetch, if we just want to fetch the top element of the stack
+        - peek()
+    - to check if the stack empty or not
+        - empty()
+
+Queue
+Element are arranged from back(tail) to front(head). FIFO
+-access one element at a time
+- queue is an interface which is an abstract type
+    ex:
+        queue<integer> q = new linkedlist<integer>();
+
+queue operation:
+    - insert new element at the tail of the queue 
+        - add(element e)
+    - fetch and delete element removed/accessed fromt eh head of the queue  
+        - remove()
+    - fetch if we just want to fetch the head of the queue
+        - peek()
+        - peek returns null if the queue is empty
+
+
