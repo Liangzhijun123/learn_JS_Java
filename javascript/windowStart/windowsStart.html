@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Window Play</title>
+    <script>
+      // Browser detection
+	  	// Redirect to legacy.html if element not found
+    		//   if (!document.getElementById("f")) {
+    		//     window.location = "legacy.html"; 
+    		//   }
+
+      // Global variable to hold reference to the new window
+      let newWin;
+
+      function makeNew() {
+        // Create a new window
+        newWin = window.open(
+          "",
+          "name",
+          "height=300,width=250,top=300,left=500"
+        );
+
+        // Write something in the new window (optional)
+        newWin.document.write("<h1>Hello World in New Window!</h1>");
+
+       
+        newWin.location = "https://google.com";  
+      }
+
+      function closeNew() {
+        // Close the new window (if it exists and hasn't been closed yet)
+        if (newWin && !newWin.closed) {
+          newWin.close();
+        } else {
+          alert("No new window to close or it's already closed.");
+        }
+      }
+    </script>
+  </head>
+  <body style="background-color: #999966">
+    <form>
+      <input
+        type="button"
+        value="Create New Window!"
+        onclick="makeNew()"
+      /><br />
+      <input
+        type="button"
+        value="Close the New Window!"
+        onclick="closeNew()"
+      /><br />
+    </form>
+  </body>
+</html>
