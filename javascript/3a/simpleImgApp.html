@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <title>Think like an App...</title>
+<style type="text/css">
+	  #bigPlace {position:absolute; top:115px; left:22px;}
+	  body{background:#999966;}
+	  .table { position:absolute;
+	   left:10px; 
+	   top:380px;
+	   z-index:70;
+	   padding:3px;
+	   border-bottom-width:3px; 
+	   border-left-width: 3px; 
+	   border-right-width: 3px; 
+	   border-top-width: 3px; 
+	   border-style: outset; 
+	   border-color:#336699; 
+	  }
+</style>
+<script>
+	// let x = new Image();
+    // x.src = "media/gal2Big.jpg";
+    // let y = new Image();
+    // y.src = "media/gal2Big.jpg";
+
+    let imgArr = [];
+
+    function inti(numImage){
+        for (let index = 0; len = numImage; index++) {
+        imgArr[i] = new Image();
+        imgArr[i].src = 'media/galxBig.jpg' + (i+1) + 'Big.jpg';
+        
+    }
+    }
+
+    function chanteme(dom){
+        // go out and update the big pic to the next pic
+            //document.getElementById('bigPic').src="media/gal2Big.jpg";  (hardcoded)
+        // the dom have access to the pic reference individually
+        console.log(this); //window object, bc function isnt attached to the img but the window
+        console.log(dom); // explicitly attached to the image object (sent in)
+
+        // to get the numeric accessor to the imgArr, ineed to pull the src apart...
+        console.log(dom.src); //dom is the whole img tag
+
+        // start to get the first image
+        let start = dom.src.lastIndexOf('/gal')+4; //+4 is go to the 4th character
+
+        // find the last image
+        let end = dom.src.lastIndexOf('.jpg');
+
+        let whichNum = dom.src.substring(start, end);
+         //document.getElementById('bigPic').src = imgArr[whichNum].src;
+        
+         document.getElementById('bigPic').src = imgArr[dom.getAttribute('data-num')].src;
+    }
+    
+</script>
+</head>
+<body onload = "init(document.getElementById('loader').getElementsByClassName('img'));">
+    <!--Big Pics-->
+    <div id="bigPlace">
+        <img src="media/gal1Big.jpg" name="bigPic" alt="big pics!" id="bigPic" />
+    </div><!--div holding all of the thumbs-->
+    <div class="table">
+        <div id="loader" style="height:90px; width:400px; overflow:auto; white-space: nowrap;">
+
+            <!-- 'this' have a reference on which pic you click on -->
+            <img src="media/gal1.jpg" data-num="0" onclick="chanteme(this)" onmouseover="this.style.cursor='pointer';" alt="image"/> 
+            <img src="media/gal2.jpg" data-num="1" onclick="chanteme(this)" onmouseover="this.style.cursor='pointer';" alt="image"/> 
+            <img src="media/gal3.jpg" data-num="2" onclick="chanteme(this)" onmouseover="this.style.cursor='pointer';" alt="image"/> 
+            <img src="media/gal4.jpg" data-num="3" onclick="chanteme(this)" onmouseover="this.style.cursor='pointer';" alt="image"/> 
+            <img src="media/gal5.jpg" data-num="4" onclick="chanteme(this)" onmouseover="this.style.cursor='pointer';" alt="image"/> 
+            <img src="media/gal6.jpg" data-num="5" onclick="chanteme(this)" onmouseover="this.style.cursor='pointer';" alt="image"/>
+        </div>
+    </div>
+</body>
+</html>

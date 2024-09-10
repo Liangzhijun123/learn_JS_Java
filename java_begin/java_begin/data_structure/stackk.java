@@ -18,7 +18,7 @@ public class stackk {
         //  declare stack and intitaliate
         //  stack of string, storing strings. the object are string
         Stack<String> stack = new Stack<String>();
-        
+         
         // passing in the object "minecraft"
         stack.push("Minecraft"); //bottom
         stack.push("teaky");
