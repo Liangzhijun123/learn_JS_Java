@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function val(){
+        let ret = true;
+        // first name
+        if(document.forms[0].elements[0].value == ""){
+            // turn it red, dont leave
+            ret = false;
+        }
+        // last name
+        if(document.forms[0].elements[1].value == ""){
+            // turn it red, dont leave
+            ret = false;
+        }
+        return ret;
+    }
+</script>
+
+<body>
+    <!-- GET: goes to url bar when you click on the 'a' tag. 
+        Issues: limited size, can lose data, it shows url in the bar 
+    -->
+
+    <!-- POST:  doesn't show url bar. doesnt show credit card in the url.
+      sending values, take any amount of data. 
+      -->
+    <form method="get" action="page.php" onsubmit="return val();">
+        First name: <input type="text" name="fn" /> <br />
+        Last name: <input type="text" name="ln" /> <br />
+        <input type="radio" name="test" value="fred" /><b>Click me to see fred</b><br />
+
+        <!-- label tag is when u click anywhere in the radio button area it gonna highlight -->
+        <label for="tag"><input type="radio" name="test" value="label_tag" id="tag"/><b>Label tag</b></label><br />
+
+        <select size="4">
+            <option value="carrorts">Carrots</option>
+            <option value="teaky">teaky</option>
+            <option value="helloworld">helloworld</option>
+            <option value="carrorts">Carrots</option>
+            <option value="carrorts">Carrots</option>
+            <option value="carrorts">Carrots</option>
+        </select><br />
+
+        <textarea rows="10" cols="40" name="novella" placeholder="Default text here"></textarea><br />
+        <input type="submit" value="click me" /><br />
+
+        <button>Click me</button>
+
+
+        <!-- 
+        page.php?fn=dan&ln=bog
+        in php
+
+        $_GET['fn'] (dan)
+        $_POST['fn'] (it has to sent as a post)
+        -->
+    </form>
+</body>
+
+</html>
