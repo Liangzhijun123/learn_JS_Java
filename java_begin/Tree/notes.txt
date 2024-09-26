@@ -1,0 +1,55 @@
+Tree: use for organizing stuff
+
+Binary Trees
+-a binary tree node is structured as 
+    left child(left subtree)          
+    data (a key value associated with the node)           
+    right child (right subtree)
+
+-to serach for data, we must traverse the structured
+-traverse a tree means that we visit every node in the tree once only
+    -the way we traverse depend on the node, left or right
+ 
+- one way of travseing tree is look at left subtree, then look at data, then look at subtree
+- another way of traversing tree is DLR (data, left, right)
+- LRD (left, Right, Data)
+
+preOrder traversal (DLR/DRL)
+    -visit the data traverse left subtree, traverse right subtree
+
+
+InOrder traversal (LDR/RDL)
+    - traverse left subtree, visit the data, traverse right subtree
+
+Postorder Traversal (LRD/RLD)
+    -traverse left subtree, traverse right substree
+
+
+Binary Tree (if done properly it is faster than linear data structure)
+    - the left subtree of a node key value with key values less than the node key value
+    - the right subtree of a node contains only nodes with key values greater than the node key value
+
+Building a binary search tree
+ data:23,25,15,16,11,700,106
+    1: insert 23
+    2: insert 25 (goes to right of 23)
+    3: insert 15 (left of 23)
+    4: insert 16 (right of 15)
+    5: insert 11 (left of 15)
+    6: insert 70 (right of 25)
+    7: insert 106 (right of 70)
+
+Ideal Binary Search Tree   
+    -will have the maximum number of possible nodes at each level. all keys may be found in <= 2 operations
+
+Builder BST
+    data: 11,15,16,23,25,70,106
+    1: pick the center number as the center node
+    2: 11,15,16 are the left subtree of 23
+        2a: if you are on the left subtree of 23 and want to insert middle number which is 15
+        2b: anything less than subtree is left, anything greater than subtree is right
+    3: 25,70,106 are the right subtree of 23
+        3a: insert 70 cuz is the middle data
+        3b: pass down 25 to left, 106 at right
+
+

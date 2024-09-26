@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script> 
+    function changeAll(toWhat, whatVal){
+        // hard coded:
+            //document.getElementById('coolBeans').style.color = toWhat.value;
+        
+        document.getElementById('coolBeans').style[whatVal] = toWhat.value;
+    }
+</script>
+<body>
+    <h2>DHTML review plus...</h2>
+    <div onmouseleave ="this.style.color='';"
+    onmouseover="this.style.color = 'red';" style="border:2px solid grey;">
+    mouse over test
+    </div>
+    <form>
+        put in a color name (or hex): <input type="text" onchange="changeAll(this, 'color')"/><br/>
+        put in a font size (like 12px): <input type="text" onchange="changeAll(this, 'fontSize')"/><br/>
+        put in a font family: <input type="text" onchange="changeAll(this, 'fontFamily')"/><br/>
+        put in a new left (like 100px): <input type="text" onchange="changeAll(this, 'left')"/><br/>
+        put in a new top (like 200px): <input type="text" onchange="changeAll(this, 'top')"/><br/>
+        put in a background color: <input type="text" onchange="changeAll(this, 'backgroundColor')"/><br/>
+    </form>
+    <section id="coolBeans" style="border:2px solid red; width:10em; position:relative;"> some text to control</section>
+
+    <hr style="margin-top:2em;"/>
+    <h2> request Animation frame()</h2>
+    <script>
+        function moveOne(){
+            let move = document.getElementById('move1');
+            let pos = parseInt(move.style.left);
+            if (pos < 700){
+                move.style.left = pos + 5 + 'px';
+                requestAnimationFrame(moveOne);
+            }
+
+        }
+    </script>
+    <div id="move1" onclick="requestAnimationFrame(moveOne);" style="border:2px solid green; width:10em; position:relative; left:0px; ">
+        FIrst Slide test
+    </div>
+
+    <script>
+        function moveAll(tragetId, end, delta){
+            let move = document.getElementById(targetId);
+            let pos = parseInt(move.style.left);
+            if(pos < end) {
+                move.style.left = pos + delta + 'px';
+                requestAnimationFrame(function(){moveAll(targetId, end, delta);});
+            }
+        }
+    </script>
+    <div id="move2" style="border:2px solid aqua; width:10em; position:relative; left:0px; " onclick="requestAnimationFrame(function(){moveAll('moveAll',900,7)})"></div>
+        more control slide test
+    </div>
+</body>
+</html>

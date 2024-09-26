@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+        function changeMe(){
+            let rEle = document.createElement('input');
+
+            rEle.type = 'range';
+            
+            // put it on the page
+            document.getElementsByTagName('body')[0].appendChild(rEle);
+
+            document.getElementById('text').appendChild(rEle);
+
+            // parentToGoInto.insertBefore (ele, childOfParentToGoInto)
+            // top of the page where the body tag is
+                // document.getElementsByTagName('body')[0].insertBefore(rEle,document.getElementsByTagName('body')[0].firstChild)
+            $$('body',0).insertBefore(rEle,
+                $('everything')
+
+                // at the start of the moreText
+                    //$('moreText').insertBefore(rEle, $('moreText').firstChild)
+
+                // between the boxes
+                    // $('everything').insertBefore(rEle, $('moreText'))
+                
+                // removes
+                    // parent.removeChildren(childOfParentToKill)
+                        // $('everything').removeChild($('moreText'));
+                        // $('moreText').reveChild($'moreText').childNodes[0]
+                    // parent.replaceChild(ele, childOfParentToReplace)
+                        // $('everything').replaceChild(rEle, $('moreText'));
+                    // nodeToClone.cloneNode(t/f)
+                        // let c = $('everything').cloneNode(true);
+                        // $$('body',0).appendChild(c);
+            );
+       }
+
+       function $(id){
+        return document.getElementById(id);  //document.getElementById('everything')
+       }
+
+       function $$(ele, pos){
+        return document.getElementsByTagName(ele)[pos]; //document.getElementsByTagName('body')[0]
+       }
+
+</script>
+<body>
+    <div id="everthing">
+        <div style="position:absolute; top:8px; left:200px;" id="buttons">
+            <button onclick="changeMe();"> Do it</button>
+        </div>
+
+        <div id="text" style="border:2px;  width:10px;">
+            Text
+        </div>
+        <div id="moreText" style="border:2px;  width:10px;"></div>
+            More Text
+        </div>
+    </div>
+</body>
+</html>
