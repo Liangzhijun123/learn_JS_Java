@@ -1,0 +1,36 @@
+//html
+<p onclick="myFunct()"></p>
+
+//JS
+
+document.getElementById ('thing').onclick = myFunct;
+//dom.event  = method;
+
+document.getElementById('thing').setAttribute('onclick',myFunct());
+
+//when you click on this what you see on the console is ->
+/*
+-Element Click Event: You have an element with the ID thing (e.g., a button or a paragraph) that triggers a click event.
+
+-Event Handler: When that element is clicked, the inline function you set as the onclick handler executes:
+
+*/
+document.getElementById('thing').onclick= function(){otherFunct('args')}; //send an argument with the wrapper function. 
+
+function myFunct(){
+    console.log(this);
+    //from line 2 - it is the window object
+    //from line 7 - is the p tag
+    //fromline 10 - is the window object
+}
+
+function otherFunct(x){
+    console.log(x);
+}
+
+//advance Event
+document.getElementById('thing').addEventListener('click',funct); //assigning click, call the funct. it will call the funct when you click on 'thing'
+
+document.getElementById('thing').addEventListener('click',function(){funct('args')}); // The wrapper function allows you to pass specific arguments to the function you want to execute when the event occurs. 
+
+document.getElementById('thing').addEventListener('click',funct,{once:true});

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Events</title>
+	<script type="text/javascript">
+	//For Image 1 --------------------------------------------------------------------
+	//All as HTML attributes
+	// -since the call to 'this' is within the attribute, it refers to the element.
+	
+	function simpleFunct(){
+		console.log('call with no args...',this);
+	}
+
+	function functArgs(x){
+		console.log(x,this);
+	}
+	
+	//For Image 2 --------------------------------------------------------------------
+	//assign an event to Image 2
+
+	//image is on the page
+	function init(){
+		document.getElementsByTagName('img')[1].onclick= simpleFunct;
+		document.getElementsByTagName('img')[1].onmouseleave = function(){functArgs("from a js property event")};
+	}
+	
+	
+	  
+    //For Image 3 --------------------------------------------------------------------
+	//attach an event to Image 3
+
+	function init2(){
+		//put the addeventlistener on the img
+		document.images[2].addEventListener('click',simpleFunct, {once:true});
+		document.images[2].addEventListener('click',function(){functArgs('from addevent')});
+
+		//for capture bubble phase...
+		//change to true to have them fire in order
+		document.images[2].addEventListener('mouseover', simpleFunct, false); //goes in order, true first
+		document.images[2].addEventListener('mouseover', function(){functArgs('from addevent with event cancel!')}, true);
+	}
+
+	</script>
+</head>
+<body onload="init();">
+
+  <h1>Image 1 (html attribute):</h1><img src="pic.jpg" onclick="simpleFunct();"/>
+  
+  <h1>Image 2 (JavaScript property):</h1><img src="pic.jpg"/>
+  
+  <h1>Image 3 (JavaScript listener):</h1><img src="pic.jpg"/>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function init(){
+        //create a button
+        let myB = document.createElement('button');
+
+        //this create a button that <button id='test'>  </button>
+        myB.id = 'test';
+
+        //this create a <button id='test'> press me </button>
+        myB.appendChild(document.createTextNode('press me'));
+       
+        //button event, onclick is window object. setattribute does not give me access to the obj (this) in the function
+        myB.setAttribute('onclick',"functNoArgs()") //when onclick, it shows the console mesage. (it has to be string)
+
+        // on mouse enter is button object. js property event does give access to obj (this) in function
+        myB.onmouseenter = functNoArgs; //assinging function to be a memeber of the onmousenter object. but it does the same thing in the console
+
+        myB.onmouseleave = function(){
+            functWithArgs("i am from a wrapper function, do not have access to this")
+        };
+
+        //this only fires the function and only works when reloading the page and not onmouseeneter
+         //myB.onmouseenter = functNoArgs(); 
+
+        // put a button in the body tag
+        document.getElementsByTagName('body')[0].appendChild(myB);
+    
+
+
+    }
+
+    function functNoArgs(){
+        console.log("i was called with no arguments");
+    }
+
+    function functWithArgs (x){
+
+        // 'this' refer to window object because it calls a function with argument
+        console.log(x, this);
+    }
+</script>
+<body onload="init();">
+    
+</body>
+</html>
