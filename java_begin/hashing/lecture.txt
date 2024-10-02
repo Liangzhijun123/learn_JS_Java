@@ -1,0 +1,50 @@
+Hashing
+- used things that are one-way (function that accept an input of any length L and generates a hash message of some fixed length)
+    - should not be able to undo or invert a hash to get back the original input
+-should be collision resistant
+    - it should not be possible to find two inputs that produce the same output
+- Java uses hashcodes to prove that two objects are different from one another
+
+Hashing function Opertions
+- AND  
+- OR  
+- XOR  
+
+- the location where a key is stored depends upon the hash function
+Example: 
+    Hash functionL key mod 7
+    Input key: 6,21,44,106,59,67,75, 701, 561, 498, 211
+
+    n-1 down to zero
+    Location:  Key:
+    0           21
+    1           106, 701, 561, 498, 211 (it shouldnt do this. got too much hashing thing in same place)
+    2           44
+    3           59
+    4           67
+    5           75
+    6           6
+
+- hashmap is implemented on top of an array
+- two items are required when required when creating a hash map
+    - inital capacityL how many element the array will have. default is 16
+    - load factor: how full the hash map can ge before the capacity is increased. default is 0.75
+
+- HashMap <K key, V value> ()
+    - Insert: put(K key, V value)
+    - fetch: get(K key) -> return value
+    - Delete: clear() or remove(K key)
+    - Update: replace(K key, V value)
+    - Query: containsKey(K key)
+    - containsValue(V value)
+    - size()
+
+Heap
+- a specialized constraint that all element data must be below the node
+- must either be less than or equal to or greater than or equal to the current node data
+
+Min Heap
+- node data value must be less than or equal to the data of its children
+
+Max Heap
+- node data value must be greater than or equal to the data of its children
