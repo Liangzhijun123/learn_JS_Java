@@ -1,0 +1,40 @@
+<article class="recipe-card">
+
+    <div class="second">
+        <div class="first">
+            <div>
+                <h2>${recipe.name}</h2>
+                <div class="recipe-ingredients">
+                    <h3>Ingredients:</h3>
+                    <ul>${ingredientsList}</ul>
+                </div>
+            </div>
+
+            <div>
+                <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image">
+
+            </div>
+
+            <div>
+
+                <div>
+                    <div class="recipe-instructions">
+                        <h3>Instructions:</h3>
+                        <ol>${instructionsList}</ol>
+                    </div>
+                    <div class="recipe-info">
+                        <p><strong>Cuisine:</strong> ${recipe.cuisine}</p>
+                        <p><strong>Prep Time:</strong> ${recipe.prepTimeMinutes} minutes</p>
+                        <p><strong>Cook Time:</strong> ${recipe.cookTimeMinutes} minutes</p>
+                        <p><strong>Servings:</strong> ${recipe.servings}</p>
+                        <p><strong>Difficulty:</strong> ${recipe.difficulty}</p>
+                        <p><strong>Rating:</strong> ${recipe.rating} (Based on ${recipe.reviewCount} reviews)</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+</article>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Storage Example</title>
+    <script type="text/javascript" src="cookies.js"></script>
+    <script type="text/javascript">
+      ////////////////////////////Careful - does not work on file:// (MUST upload to gibson)
+      //////For the project, do something that fits into what you are building - if you do this, you will get a "0" for storage
+      //localStorage & cookies
+
+      // function changebg(whate)
+      const changebg = (what) => {
+        // does the browser understand localstorage?
+        if (!window.localStorage) {
+          // feedback for what i am working on
+          document.getElementById("output").firstChild.nodeValue =
+            "localStorage";
+
+          // if an argument in body onload, then i need to put what in local storage
+          if (what) {
+            localStorage.setItem("color", what);
+          }
+
+          if (localStorage.getItem("color")) {
+            document.getElementsByTagName("body")[0].style.background =
+              localStorage.getItem("color");
+          }
+          // if no argument like the body onload, then i need to change the background to the value in localstorage
+        } else {
+          // if i am here, then what? i have to use cookies...
+          // so go and do the same thing with cookie
+        }
+      };
+
+      function clearbg() {
+        // remove from storage
+        localStorage.clearItem("color");
+
+        // change background
+        document.getElementsByTagName("body")[0].style.backgroundColor = "";
+      }
+
+      // cookies
+      if(GetCookie('user_id') == null ){
+        // they havent been here
+        var name = prompt('hi, first time, give name...','');
+
+        // put in cookie
+        SetCookie('user_id', name);
+        setCookie('hit_count', 1);
+        document.write("<h2> welcome there - " + name + ", looks like your first time...</h2>");
+      } else{
+        // update my hit_count
+        SetCookie('hit_count', parseInt(GetCookie('hit_count')) + 1);
+
+        document.write('<h3> weclome back, ' + GetCookie('user_id') + ', you have been here ' + GetCookie('hit_count') + ' times...');
+      }
+    </script>
+  </head>
+  <body onload="changebg()">
+    <div id="output"></div>
+    <div
+      style="position: absolute; right: 10px; bottom: 10px; background: #c9c"
+    >
+      Change your style.
+      <span style="cursor: pointer" onclick="changebg('red');">Red</span> |
+      <span style="cursor: pointer" onclick="changebg('green');">Green</span> |
+      <span style="cursor: pointer" onclick="clearbg()">Clear</span>
+    </div>
+  </body>
+</html>
