@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function init(){
+        // method - createElement, createTextNode, setAttribute
+        // appendChild, removeChild, insertBefore, replaceChild, cloneNode
+        var x = document.createElement('button');
+        x.setAttribute('id','test');
+        // x.id = 'test';
+        // x.onclick = function() {doIt('hello');};
+        x/setAttribute('onclick','doIt("hello")');
+        x.appendChild(document.createTextNode("look ma, no hands..."));
+
+        document.getElementsByTagName('body')[0].appendChild(x);
+
+        document.getElementById('one').firstChild.nodeValue = 'fred';
+
+        // parent.appendChild(ele) - goes at the end
+            //document.getElementsByTagName('div')[0].appendChild(x);
+
+        // insertBefore
+        //parent.insertBefore(ele, childOfParentToGoInFrontOf);
+        document.getElementsByTagName('p')[1].insertBefore(x, document.getElementsByTagName('p')[1].firstChild); //infront of the 'two' word
+
+        document.getElementsByTagName('p')[0].onclick = function(){
+            console.log('you did it');
+        }
+
+        //document.getElementsByTagName('p')[1].onclick = other;
+        document.getElementsByTagName('p')[1].onclick = function(){other();};
+
+        // going after the style color
+        document.getElementById('thing').style.color ='red';
+
+        // font-family = fontFamily
+        // border-margin-bottom = borderMarginBottom
+
+        // UNITS
+    }
+
+    function other(){
+        console.log('no arg');
+    }
+
+    function val(){
+        // check stuff
+        return false;
+    }
+</script>
+<body onload="init()">
+    <div>
+        <!-- node is the p tag (parent). child node is the 'hello' -->
+     <p id="one" onclick = "this.firstChild.nodeValue = 'diff';">hello</p>
+     <p>two</p>
+    </div>
+
+    <form onsubmit="return val()">
+        fn: <input type="text" placeholder="put name here" id="fn" name="fn"/>
+        <input type="submit" value="click me"/>
+    </form>
+    
+</body>
+</html>
