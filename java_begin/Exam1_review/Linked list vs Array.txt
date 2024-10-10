@@ -1,0 +1,9 @@
+Arrays:
+    - Use when you need fast access to elements by index.
+    - Ideal for fixed-size collections where the size doesn't change often.
+    - Better for scenarios where memory locality is important.
+
+Linked Lists:
+    - Use when you need frequent insertions and deletions.
+    - Ideal for dynamic collections where the size changes frequently.
+    - Useful when you don't need random access to elements.

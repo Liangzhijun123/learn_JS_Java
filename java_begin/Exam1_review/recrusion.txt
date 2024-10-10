@@ -1,0 +1,4 @@
+Components of a Recursive Solution
+    - Base Case(s): This is the simplest version of the problem, where no further recursion is needed. The recursion stops when the base case is met.
+    - Reduced Problem: This is the recursive step where the original problem is broken down into smaller instances of the same problem.
+    - General Solution: The combination of the recursive call (reduced problem) and the base case that leads to the final solution.

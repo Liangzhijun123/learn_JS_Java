@@ -13,19 +13,19 @@ class Node {
 }
 
 public class BinarySearchTree {
-   Node root; // root node of the entire tree
+   Node root; // root node of the  tree
 
    public BinarySearchTree(int[] keys) {
-      // sort keys in ascending order
+      // sort keys in order
       Arrays.sort(keys);
       int start = 0;
       int end = keys.length - 1;
       int mid = (start + end) / 2;
       root = new Node(keys[mid]);
 
-      // left side of array passed to left subtree
+      //  left subtree
       insert(root, keys, start, mid - 1);
-      // right side of array passed to right subtree
+      //  right subtree
       insert(root, keys, mid + 1, end);
    }
 

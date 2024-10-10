@@ -1,0 +1,28 @@
+Differences Between Binary Trees, Binary Search Trees, and Heaps:
+
+Binary Tree:
+
+    - A binary tree is a tree data structure where each node has at most two children: a left child and a right child.
+    - General: No specific rules for node values.
+    - Used to represent hierarchical data, such as file systems or organizational structures.
+
+Binary Search Tree (BST):
+
+    - A binary search tree is a special type of binary tree in which:
+        - The value of every node in the left subtree is less than the value of the root.
+        - The value of every node in the right subtree is greater than the value of the root.
+    - Rule: Left < Root < Right.
+    - Used for efficient searching, insertion, and deletion (average time complexity: O(log n)).
+
+Heap:
+
+    - A heap is a special binary tree used to implement priority queues. It has two types:
+        - Max Heap: The value of the parent node is greater than or equal to the values of its children.
+        - Min Heap: The value of the parent node is less than or equal to the values of its children.
+    - Rule: Parent ≥ Children (Max Heap) or Parent ≤ Children (Min Heap).
+    - Used in algorithms like Dijkstra’s shortest path, heapsort, and priority queues.
+
+Traversals:
+    In-order (Left, Node, Right): 20 30 50 60 70 80
+    Pre-order (Node, Left, Right): 50 30 20 70 60 80
+    Post-order (Left, Right, Node): 20 30 60 80 70 50
