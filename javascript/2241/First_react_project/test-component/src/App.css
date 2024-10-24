@@ -12,4 +12,10 @@
   margin:10px;
   border: 3px solid red;
   border-radius: 50px;
+
+}
+
+.inline{
+  display: flex;
+  justify-content: center;
 }
