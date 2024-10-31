@@ -1,0 +1,42 @@
+Sorting
+- arrange a collection of items in ascending or descending order
+- sorting is necessary because:
+    - seeing data in sorted order makes it easier to analyze and more plalatable to look at
+    - improves the efficiency of an algorithm operating
+
+Characteristics of sorting algorithm
+- how many comparison do yhey perform?
+    - using compare/compareTo, <, >
+    - how many swaps do they perform?
+        - if a comparision it necessary, data may be swapped within the data structure
+    - how much memory do they use?
+        - sort done in place involve swaps
+        - some sorting alogrithms use auxiliary memory locations
+
+Bubble sort
+- the classic mested loop sort o(n^2) that swaps adacent items in place in an array if they are not in the correct order
+
+Insertion sort
+- another nested loop sorting algorithm o(n^2) that does it sorting in place
+- Modeled after how playing cards can be sorted by hand
+- choose one item (key) at a time and insert it into the correct location an already sorted sequence within the array
+- find the correct location of the key 
+
+Sorting efficiency
+- bubble sort and insertion sort are perfectly fine for smaller numbers of items ( < 10k items)
+- o(n^2) becomes probmeatic in comparison with o(n log2 n) as the number of items increases to hundres and so on
+
+MergeSort
+- uses a divide and conquer approach to achieve o(n log2 n) for all data sets
+- require addition memory due to the way it merges its subproblems together at the end
+- general approach
+    - divide the array into two subarray
+    - sort each subarray
+    - merge the sort subarrays into a single sorted array
+
+Merge method general steps
+1: crate temporoary array to hold the items from the subarrays
+2: copy subarray items into the temporary arrays so that they can be merged
+3: copy items from the templorary arrays into the original arary in sorted order
+    a: one subarray items will all be copied before the ohter subarray
+    b: copy remining items from the other array in the original array

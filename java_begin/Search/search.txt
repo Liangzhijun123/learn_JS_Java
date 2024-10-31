@@ -1,0 +1,26 @@
+Searching
+- finding an item from within a collection of items
+- types of items you might search for:
+    - records in a database
+    - elements in a data structure
+    - text in a file
+    - keywords in a collection of web pages
+- searching is often assisted by organizing the array first
+
+Types of searches
+- binary search tree
+    - find a node or not in a tree in o(log2 n) time
+- hashing
+    - find a key/value pair in a hash map in o(1) time if perfect hashing
+- array
+    = finding a specific element within an array
+- String searching
+    - find a substring within a larger String
+    - find a keyword or phrases within a document 
+
+Array base searches
+- most array base searches require that element are sorted prior to seraching to attain maximum efficiency
+- worst case is o(log2 n) to o(n)
+
+Iterpolation
+- interpolation involves constr

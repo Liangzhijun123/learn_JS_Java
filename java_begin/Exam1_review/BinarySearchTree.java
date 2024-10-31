@@ -101,12 +101,11 @@ public class BinarySearchTree {
         return minValue;
     }
 
-   
-
      // In-order traversal (ascending order for BST)
      public void inOrder() {
         inOrderRec(root);
         System.out.println();
+        
     }
 
     private void inOrderRec(Node root) {

@@ -1,0 +1,10 @@
+Hash function
+- the character from two set of inputs are the same like 'eve' and 'vee' would product the same hash value
+- the character from two sets of inputs sum up to the same value: 'eve' and 'uch' produce a hash of 320
+- to complete avoid hash collision, a strong hash like SHA family hash, is extremely unlikely to produce a collision
+
+Rabin Karp Performance
+- assume an efficient hash function, we can compute the next window hash in O(1)
+- if the hash function produces few collisions, worst case complexity is O(n+m)
+- an extrememly poor hash function causes a worst case complexity of O(n*m)
+

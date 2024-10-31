@@ -1,0 +1,36 @@
+
+Hash Tables
+    - A hash table is a data structure that maps keys to values using a hash function. It's designed to allow for quick insertion, deletion, and lookup operations in an average-case time complexity of O(1). A hash table consists of an array where each element stores a reference to a key-value pair. The key is used to calculate an index in the array using a hash function.
+
+
+Hash Function:
+    - A hash function takes a key and computes an integer value called the hash code. This hash code is then used to determine the index in the underlying array where the value associated with that key will be stored.
+    - A good hash function ensures that it distributes keys uniformly across the hash table to minimize collisions (when multiple keys are hashed to the same index).
+
+Hash Table Construction:
+    - When a hash table is constructed, the underlying array is initialized with a certain capacity.
+    - The hash function is critical for determining the array index (bucket) where the key-value pair should go. It transforms the key into an index by typically performing some modulus operation (index = hashCode % array.length).
+    - If multiple keys hash to the same index, the table needs a way to handle this collision, which can be done through techniques like chaining (where each bucket contains a linked list or tree of entries) or open addressing (where probing is used to find an empty slot).
+
+Initial Capacity:
+
+    - The initial capacity refers to the size of the underlying array when the HashMap is created. It defines how many buckets the hash table starts with.
+    - The default initial capacity in Java’s HashMap is 16.
+    - If the number of elements exceeds the current capacity, the hash table will be resized (doubled) to accommodate more entries, but this resizing operation is costly (rebuilding the table and rehashing the keys).    
+
+Load Factor:
+
+    - The load factor is a measure of how full the hash table can get before it needs to be resized.
+    - The default load factor is 0.75, which means that when the table is 75% full, the table will resize (double the capacity).
+    - A lower load factor means fewer collisions and faster lookup, but it uses more memory. A higher load factor means the table can hold more elements in a smaller space, but may result in more collisions and slower performance.
+
+Resizing and Rehashing:
+
+    - When the number of elements exceeds the product of capacity and load factor, the HashMap resizes. For example, with an initial capacity of 16 and a load factor of 0.75, once 12 elements are inserted, the capacity will be doubled to 32.
+    - During resizing, all the existing key-value pairs need to be rehashed to new buckets, which is why it's considered expensive.
+
+Summary of Roles:
+
+    - The hash function ensures that the keys are distributed uniformly across the hash table, minimizing collisions.
+    - The initial capacity determines how many elements the hash table can store before needing to resize.
+    - The load factor controls when the resizing occurs, balancing memory usage and performance by dictating how full the hash table can get before expanding.

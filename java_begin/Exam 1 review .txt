@@ -1,0 +1,23 @@
+Number 2:
+- Start from the root
+- then go to the right
+- then go to 11 to search it
+
+Number 3:
+- trying to figure out if the number is primse, false if not
+- school method:
+    - some number of prime -> increase number of value and divide by '?'
+    - increase 'i' through 2 - 1
+    - check to see if value is prime is 2, if is 2 then it return true
+    - return false will be if n = 0 then is evenly divisble, is i = n -1? if that is the case i look all the possible value 
+
+Number 4:
+code snippet 2 is faster because checking if there is another value then go to next one. don't have to go from the beginning. maintain the state it iterate faster
+
+Number 6:
+if i make the hashmap too big, it takes a lot of source space.
+if the hashmap is too low, it runs slowly, you need to rebuild again and again by doing rehashing
+
+Number 7: 
+binary search tree -> everything in left subtree the value under is lower, everything in right the value under is greater
+

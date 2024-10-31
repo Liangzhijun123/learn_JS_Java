@@ -1,0 +1,84 @@
+How do we analyzez an alogirthm?
+    - space complexity
+    - time complexity
+
+Time complexity
+    - best case
+    - average case
+    - worst cast (big O notation)
+
+What is Algorithm?
+    - an unambiguous set of step by step instructions that can be used to solve a problem
+    - an algorithem need not be technical in nature
+        - tying your shoes
+        - riding a bike
+        - making sandwhich
+    - the algorithm returns a solution to a problem, according to the algorithm specification in a finite number of steps
+
+Efficiency
+    - space complexity: refer to the amount of memory needed by data structures as an alogrithm executes. 
+        - what needs to be store in memory?
+    - time complexity: concerned with how well an algorithm scales as the size of the input(how many rate) data increase.
+
+Comparing Algrithms
+    - Execution time: measured as the amount of time an algorithmtakes to run.
+    - Number of operations: how many statements are executed as an alogirthm runs
+    - which should we use to compare algorithms?
+
+Time complexity
+    - denotes how well an algorithem scales as the size of its input data increases
+    - Best case: what is the best we can possible do?
+    - average case: what will happen on averate?
+    - worst case: how many steps would it take?
+
+Worst case time complexity 
+    - best case can be misleading
+    - the average ase is something that could happen
+    - worst case provide upper bound on how the number of oeprations will increase with increasing input. "big O"
+
+Common Big O classifications
+    - constant Time - o(1) -> doesnt matter how many array or element in there.
+    - 1 loop, repeat only once
+        - same amount of time to return a solution, regardless of input size
+            public static int returnElement(int[] nums, int element){
+                return nums[element];
+            }
+        - Examples: 
+            - HashMap -> get, put
+            - Stack -> push, pop
+            - Queue -> add, remove
+            - ListIterator -> next, previous
+    
+    - Linear Time - o(n) -> n is size of the array. 
+        - visits every input element, meaning that as the input size grows, the alogirthm takes proportionally longer
+        - how many times do i have to go through the loop
+        - 1 loop, no repeat
+
+    - Quadratic TIme - o(n^2)
+        - the number of operations grows by a factor of n^2 for each input. for example, an input size of 8 would result in 64 operations
+        - 2 loops
+
+    - Polynomial Time - o(n^c)
+        - contain 3 nested loops where each loop visit each data structure element are consider cubic 
+    
+    - Logarithmic Time - o(log2n)
+        - seen for algorithem that divide a problem in half (divide and conquer) during iteration
+        - like binary search tree
+
+    - Linearithmic Time - o(n log2 n)
+        - divide and conquer algorithem that visit every element in a data structure
+        - example: method to insert element into a binary search tree
+            - all element in the sort arary will be inserted into the tree
+            - data is divided in half at each new node until no data remaind
+
+    - Exponential time - o(2^n)
+        - number of oeprations doubles each time the input size grows by one
+        - algorithms result from:
+            - attempting to implement an algorithem using a brute force apporach
+            - brute force looking of every possible ways 
+    
+    - Fibonnaci sequence
+        - generate using: 
+            - f1 = 1
+            - f2 = 1
+            - fn = f(n-1) + f(n-2 )

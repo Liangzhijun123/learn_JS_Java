@@ -1,0 +1,13 @@
+String Search
+- string searches invovle locating a substring within a string and returning the index of the starting location of the substring
+- most approachesi nclude:
+    - one is slow one is faster
+    - using a sliding window on the string that is the size of the substring
+    - representing the window and substring in some more compact fashion
+
+Rabin Karp Alogirthm
+- rather than alwats comparing the string window with the substring, only compare them when necessasry
+- represent the substring and each string window using a hash function
+    - only need to compute the substring hash once
+    - compute hashes for each window as needed
+- select a hash function that causes few collisions and can be computed efficiently

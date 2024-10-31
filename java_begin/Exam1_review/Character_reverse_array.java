@@ -35,7 +35,7 @@ public class Character_reverse_array {
         Character_reverse_array reverse = new Character_reverse_array();
 
         // Test cases
-        String test1 = "hello";
+        String test1 = "hello"; 
         String result1 = reverse.reverseWithArray(test1);
         System.out.println("Original: " + test1 + " | Reversed: " + result1);  // Expected: olleh
 

@@ -1,0 +1,259 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "StringSearch",
+            "request": "launch",
+            "mainClass": "Assignments.StringSearch",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "ClassicSearchesA3",
+            "request": "launch",
+            "mainClass": "Assignments.ClassicSearchesA3",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "ClassicSearchesA3",
+            "request": "launch",
+            "mainClass": "ClassicSearchesA3",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "IRSystem",
+            "request": "launch",
+            "mainClass": "IRSystem",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "PE",
+            "request": "launch",
+            "mainClass": "PE",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BASIC",
+            "request": "launch",
+            "mainClass": "BASIC",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "BalancerStarter",
+            "request": "launch",
+            "mainClass": "BalancerStarter",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearchTree",
+            "request": "launch",
+            "mainClass": "BinarySearchTree",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "Array",
+            "request": "launch",
+            "mainClass": "Exam1_review.Array",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearchTree(1)",
+            "request": "launch",
+            "mainClass": "Exam1_review.BinarySearchTree",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "Character_reverse_array",
+            "request": "launch",
+            "mainClass": "Exam1_review.Character_reverse_array",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "CustomLinkedList",
+            "request": "launch",
+            "mainClass": "Exam1_review.CustomLinkedList",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "CustomQueue",
+            "request": "launch",
+            "mainClass": "Exam1_review.CustomQueue",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "CustomStack",
+            "request": "launch",
+            "mainClass": "Exam1_review.CustomStack",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "FactorialRecursive",
+            "request": "launch",
+            "mainClass": "Exam1_review.FactorialRecursive",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "FibonacciRecursive",
+            "request": "launch",
+            "mainClass": "Exam1_review.FibonacciRecursive",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "HashMapPQ",
+            "request": "launch",
+            "mainClass": "HashMapPQ",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "Recursion",
+            "request": "launch",
+            "mainClass": "Recursion",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearchTree(2)",
+            "request": "launch",
+            "mainClass": "java_begin.BinarySearchTree",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "java_begin.data_structure.Main",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "linkedlist",
+            "request": "launch",
+            "mainClass": "java_begin.data_structure.linkedlist",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "prior_queue",
+            "request": "launch",
+            "mainClass": "java_begin.data_structure.prior_queue",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "queue",
+            "request": "launch",
+            "mainClass": "java_begin.data_structure.queue",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "stackk",
+            "request": "launch",
+            "mainClass": "java_begin.data_structure.stackk",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "lesson1",
+            "request": "launch",
+            "mainClass": "java_begin.lesson1",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "queueText",
+            "request": "launch",
+            "mainClass": "java_begin.queueText",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "stackTest",
+            "request": "launch",
+            "mainClass": "java_begin.stackTest",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "swap_variable",
+            "request": "launch",
+            "mainClass": "java_begin.swap_variable",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "variable",
+            "request": "launch",
+            "mainClass": "java_begin.variable",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "reverse",
+            "request": "launch",
+            "mainClass": "java_begin.week_1.reverse",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "starter",
+            "request": "launch",
+            "mainClass": "java_begin.week_1.starter",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "java_begin.week_1.test",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "listIteratorTest",
+            "request": "launch",
+            "mainClass": "java_begin.week_2.listIteratorTest",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "listText",
+            "request": "launch",
+            "mainClass": "java_begin.week_2.listText",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
+            "name": "reverseString",
+            "request": "launch",
+            "mainClass": "java_begin.week_2.reverseString",
+            "projectName": "java_begin_d657d98a"
+        }
+    ]
+}
