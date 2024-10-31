@@ -1,0 +1,28 @@
+.peopleList{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+/* one level deep */
+.peopleList > * {
+    flex: 1 1 200px;
+}
+
+.peopleListItem{
+    min-height: 250px;
+
+    /* width of 1em, relative sizing */
+    margin: 1em;
+
+    padding-top: 1em;
+
+    border: 3px solid #ddd;
+
+    border-radius: 15px;
+}
+
+/* only dealing with people list item images */
+.peopleListItem > img {
+    max-width: 150px;
+    max-height: 200px;
+}

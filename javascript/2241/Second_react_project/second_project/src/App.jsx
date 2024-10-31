@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import getData from "./utils/getData";
 import "./App.css";
+import About from "./Components/about";
+import People from "./Components/People";
+import PeopleTabs from "./Components/peopleTabs";
+
 
 function App() {
   // state var
@@ -34,10 +38,11 @@ function App() {
       </div>
       <div className="App">
         <div className="About">
-          <h2>{about.title}</h2>
-          <h3>{about.description}</h3>
-          <div className="quote">{about.quote}</div>
-          <h4>--{about.quoteAuthor}</h4>
+          <About aboutData={about} />
+          <hr/>
+          <People/>
+          <hr/>
+          <PeopleTabs />
         </div>
       </div>
     </>
