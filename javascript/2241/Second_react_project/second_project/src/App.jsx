@@ -40,7 +40,7 @@ function App() {
         <div className="About">
           <About aboutData={about} />
           <hr/>
-          <People/>
+          {/* <People/> */}
           <hr/>
           <PeopleTabs />
         </div>

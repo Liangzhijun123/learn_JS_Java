@@ -34,7 +34,7 @@ const People = () => {
       <h3>Faculty</h3>
       <div className="peopleList">
         {peopleObj.faculty.map((person, index) => 
-          <div className="peopleListItem" key={index}>
+          <div className="peopleListItem" key={person.username}>
             <h3>{person.name}</h3>
             <img src={person.imagePath} alt="this person"></img>
           </div>
@@ -44,7 +44,7 @@ const People = () => {
       <h3>Staff</h3>
       <div className="peopleList">
         {peopleObj.staff.map((person, index) => 
-          <div className="peopleListItem" key={index}>
+          <div className="peopleListItem" key={person.username}>
             <h3>{person.name}</h3>
             <img src={person.imagePath} alt="this person"></img>
           </div>
