@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GraphTraversal",
+            "request": "launch",
+            "mainClass": "GraphTraversal",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
             "name": "StringSearch",
             "request": "launch",
             "mainClass": "Assignments.StringSearch",

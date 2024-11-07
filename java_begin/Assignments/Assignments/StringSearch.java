@@ -9,18 +9,18 @@ public class StringSearch {
    static List<Integer> rabinKarpMultiple(String str, String substr) {
       int n = str.length();
       int m = substr.length();
-      int t = 0; // hash value for str window
-      int p = 0; // hash value for substr
+      int t = 0; //string window
+      int p = 0; 
       List<Integer> occurrences = new ArrayList<>();
 
-      // Calculate the hash values for the substring and first str window
+    
       for (int i = 0; i < m; i++) {
          p += substr.charAt(i);
          t += str.charAt(i);
       }
 
       for (int i = 0; i <= n - m; i++) {
-         // If hashes match, verify the substring
+     
          if (p == t) {
             int j;
             for (j = 0; j < m; j++) {
@@ -29,11 +29,11 @@ public class StringSearch {
                }
             }
             if (j == m) {
-               occurrences.add(i); // Found occurrence
+               occurrences.add(i);
             }
          }
 
-         // Compute hash for next window
+       
          if (i < n - m) {
             t = t - str.charAt(i) + str.charAt(i + m);
          }
@@ -63,11 +63,9 @@ public class StringSearch {
       String dnaSequence = "GTTGCAGTTACTTATTATCTGAAAACCAGTTGATGTTAAGGAATACTCTGTCTAAGACAACATATGTAATAAAAATTATATATTCGTTGGGTTCTCTCGA";
       String target = "GTT";
 
-      // Test Case 1: Find occurrences of "GTT"
+   
       List<Integer> positions = rabinKarpMultiple(dnaSequence, target);
       System.out.println("Positions of 'GTT': " + positions);
-
-      // Test Case 2: Count each base occurrence
       countBases(dnaSequence);
    }
 }

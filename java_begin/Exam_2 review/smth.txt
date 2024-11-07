@@ -1,0 +1,13 @@
+Algorithm Analysis
+- Time complexity vs. execution time.
+
+Search Algorithms
+- Comparing brute force string search vs. Rabin-Karp string search; understand how/when each one does its comparisons.
+- Computing hash values for Rabin-Karp.
+
+Sorting Algorithms
+- Describe why the mergesort algorithm has a complexity of O(n log2n).
+
+Graph Algorithms
+- Adjacency list vs. adjacency matrix.
+- Given a graph, determine the result of running Dijkstra's algorithm on it.

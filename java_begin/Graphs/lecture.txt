@@ -1,0 +1,57 @@
+Graph
+- a graph is a set of nodes N that are connected to each other via a set of edges E 
+    - more formally, you will see the notation of G(N,E)
+- Nodes in a graph can be connected either in a directed or undirected manner
+- Directed graph (can only go to one place to another at one time)
+
+Adjacency
+- in an undirected graph, two nodes are considered adjacent to each other if they are directly connected by an edges
+- the degree of a node in an undirected graph refers to the number of nodes adjacent to it
+
+Connectedness
+- there is a path exist in two nodes, go from one node to another
+- two noes in a graph are conneced to each other if there exists a path between them
+- a path is a set of edges that can be taken from a source node to a sink node
+
+Undirected graphs
+- nodes in a graph can be connected either a directed or undirected
+
+Weighted graph 
+- we use weighted graphs to find optimal paths between nodes
+    - optimal usually means the lowest cost path
+
+Graph Representation - Adjacency list
+- an adjacent matrix has a space complxity of N2 since node is included twice
+
+Graph algorithms
+- using unweighted graphs, we can discover if a path exist between a source node and one or more sink nodes using Breadth First Search
+- with weighted graphs, we can find an optimal path between a source node and one or mode sink node with Dijkstras algorithms
+
+Breadth First Search 
+- BFS performs a level order traversal to find a path from a source node to all other nodes in the graph
+- if a sink node is reachable from the source node, the number of levels from source to sink can be calculated
+
+BFS algorithms Steps
+1: mark all nodes in the graph as unvisited
+2: mark the source node as visited
+3: add the source node to a queue
+4: while the queue is not empty, repeat: 
+    a. remove head node from the queue and process it
+    b. add to the queue all unvisited nodes adjacent to the head node and mark those nodes as visited
+
+Dijkstra algorithms
+- used to calculate the otimal shortest path from a source node to all other nodes in a weighted graph
+- as a result, you can learn the following
+    - the total cost along the optimal path from the source to every other node
+    - the collectino of nodes along the optimal path from the source to any other node
+- Dijkstra uses a greedy appraoch by deciding at each step in the algorithms what is the best next step to take
+
+Dijkstra algorithms Steps
+1: set source node shortest distance to 0
+2: set shortest distance to all other nodes to infinity
+3: mark all nodes as unvisited
+4: repeat until all nodes are visited:
+    - choose the unvisited node with the shortest distance from the source node and mark this node as visited
+    - for the chosen node, calculate the distance of each of its unvisited adjacent nodes from the source node
+    - if a new distance is smaller than the prev known distance, update the shortest distance from source and prev node columns
+
