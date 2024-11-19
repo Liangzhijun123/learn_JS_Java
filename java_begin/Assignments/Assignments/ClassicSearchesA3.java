@@ -122,15 +122,26 @@ public class ClassicSearchesA3 {
 
    static void generateDataSets() {
       Random rand = new Random();
+      HashSet<Integer> uniqueNumbers = new HashSet<>();
+   
       for (int i = 0; i < NUM_DATASETS; i++) {
-         int[] dataSet = rand.ints(DATA_SIZE, 1, MAX_VALUE + 1).distinct().limit(DATA_SIZE).toArray();
+         int[] dataSet = new int[DATA_SIZE];
+         int count = 0;
+   
+         while (count < DATA_SIZE) {
+            int randomNum = rand.nextInt(MAX_VALUE) + 1;
+           
+            if (uniqueNumbers.add(randomNum)) {
+               dataSet[count++] = randomNum;
+            }
+         }
+   
          Arrays.sort(dataSet);
-
          SuccessfulSearches(dataSet);  
          runUnsuccessful(dataSet);     
       }
    }
-
+   
    public static void main(String[] args) {
       int key;
       int[] nums = {15, 98, 7, 22, 9, 61, 57};

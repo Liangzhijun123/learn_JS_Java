@@ -1,0 +1,47 @@
+Binary Terminology
+- each binary number, or bit string, consists of a sequence of bits
+- the bit with the largest place value is called the most significants bits
+- the bit with the smallest place value is called the least significant bit
+- a bit string consisting of n bits can represent up to 2^n decimal values where the values range from [0, 2^n -1]
+
+Decimal to Binary Conversion
+1: find the largest power of 2 less than or eqqual to the decimal value
+2: subtract the power of 2 from the decimal value and place a 1 in the bit string at that binary place
+3: Find the next largest power of 2 less than or equal to the current decimal value, subtract that power of 2
+    from the decimal value, and place a “1” in the bit string at that binary place
+4: repeat step 3 until the current decimal value is 0
+
+Hexadecimal 
+- Hex has a radix of 16
+- Hex digits are represent as 0-9 and A-F, where A is 10 and F is 15
+
+Bitwise Logicial operators
+- the most common logical operators are NOT, AND, OR, and XOR
+- ignore NOT for Java
+
+Bit Shifting
+- bit shift operators allow us to shift entire bit string to the left or to the right
+- a left shift effectively multiplies a binary number by 2
+- a right shift divides a binary number by 2. the division is an integer division
+
+Bit Masking
+- using the AND operator and a mask, we can mask in or mask out some or all of bit string. the mask is simply a collection of bits
+that will mask in or out certain bits
+- use to determine destination network
+
+Packing/unpacking bits
+- in an effort to conserve memory either because of a memory constrained environment, such as a sensor, or for efficiency, as in an image, you will find 
+many examples of mulitple data fields packed into a single variable
+
+How Packing Works
+- a single pixel within an image is represented as an int, which is 32 bits wide
+- two steps are require for packing bits
+    1: left shift each item u want to pack so they end up where you want thrm to be once packed
+    2: logical OR all shifted item together
+
+How Unpacking Works
+- two steps are required for unpacking each field from an m bit packed variable
+    1: Right shift the bits of the field until they are the n least significant (rightmost) bits in the packed variable,
+    where n is the number of bits in the field
+    2: Perform bit masking by creating a bit mask whose most significant (leftmost) m – n bits are 0’s and the remaining n bits are 1’s.
+    
