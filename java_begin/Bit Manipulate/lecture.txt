@@ -44,4 +44,6 @@ How Unpacking Works
     1: Right shift the bits of the field until they are the n least significant (rightmost) bits in the packed variable,
     where n is the number of bits in the field
     2: Perform bit masking by creating a bit mask whose most significant (leftmost) m – n bits are 0’s and the remaining n bits are 1’s.
-    
+
+image
+- a single pixel within an image is represent as an int, which is 32 bits

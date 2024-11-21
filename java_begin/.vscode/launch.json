@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Dijkstra",
+            "request": "launch",
+            "mainClass": "Assignments.Dijkstra",
+            "projectName": "java_begin_d657d98a"
+        },
+        {
+            "type": "java",
             "name": "GraphTraversal",
             "request": "launch",
             "mainClass": "GraphTraversal",
